@@ -9,7 +9,7 @@ end
 %Preprocess Payload (length appended)
 image_size=size(image);
 payload_length_max=2*ceil(log2(image_size(1)*image_size(2)+1));
-actual_payload=[de2bi(length(actual_payload),payload_length_max)'; actual_payload];
+actual_payload=[dec2bin(length(actual_payload),payload_length_max)'; actual_payload];
 
 image_size = size(image);
 
